@@ -149,3 +149,12 @@ Here are some sample results. Please visit our [project page](https://textual-in
 ![](img/samples.jpg)
 
 ![](img/style.jpg)
+
+
+## run remote jupyter for debug
+```shell
+jupyter lab --ip=0.0.0.0 --port=8877 --allow-root --NotebookApp.custom_display_url=http://127.0.0.1:8877
+```
+
+## installation notes
+Do NOT change the environment.yaml. `conda` doesn't support `cudatoolkit=11.7`. Will break the env.
