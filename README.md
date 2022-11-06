@@ -158,3 +158,11 @@ jupyter lab --ip=0.0.0.0 --port=8877 --allow-root --NotebookApp.custom_display_u
 
 ## installation notes
 Do NOT change the environment.yaml. `conda` doesn't support `cudatoolkit=11.7`. Will break the env.
+
+## webUI
+
+```shell
+nvidia-docker container run --rm -d -p 8501:8501 -e STREAMLIT_SERVER_HEADLESS=true -e "WEBUI_SCRIPT=webui_streamlit.py" -e "VALIDATE_MODELS=false" -v "${PWD}/outputs:/sd/outputs" --gpus all hlky/sd-webui:runpod
+```
+
+
